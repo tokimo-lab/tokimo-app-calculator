@@ -131,7 +131,7 @@ export default function CalculatorPage() {
               className={`rounded-full px-3.5 py-1 text-[0.7rem] font-medium transition-all duration-200 ${
                 state.mode === m
                   ? "bg-white/15 text-white shadow-sm"
-                  : "text-neutral-400 hover:bg-white/[0.06] hover:text-neutral-200"
+                  : "text-fg-muted hover:bg-white/[0.06] hover:text-neutral-200"
               }`}
             >
               {MODE_LABELS[m]}
