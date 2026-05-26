@@ -1,0 +1,15 @@
+pre-commit:
+  parallel: true
+  commands:
+    rustfmt:
+      tags: rust fmt
+      glob: "*.rs"
+      run: scripts/lefthook-rustfmt.sh {staged_files}
+      stage_fixed: true
+
+pre-push:
+  commands:
+    fmt-check:
+      run: cargo fmt -p tokimo-app-calculator -- --check
+    clippy:
+      run: cargo clippy -p tokimo-app-calculator --bins --tests -- -D warnings

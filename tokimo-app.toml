@@ -1,0 +1,24 @@
+# Tokimo app manifest
+[app]
+id          = "calculator"
+display     = "Calculator"
+version     = "0.1.0"
+description = "Tokimo Calculator — basic, scientific, and programmer modes (pure UI, no DB)"
+
+[runtime]
+lifecycle    = "resident"
+binary       = "tokimo-app-calculator"
+ui_dist      = "ui/dist"
+
+[ui]
+entry        = "assets/index.js"
+window_type  = "calculator"
+category     = "app"
+icon         = "Calculator"
+color        = "#6e6e73"
+width        = 400
+height       = 600
+
+[cli]
+name        = "tokimo-app-calculator"
+description = "Calculator app — pure UI, no CLI commands."
