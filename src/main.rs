@@ -11,10 +11,10 @@ mod cli;
 mod error;
 
 use clap::Parser;
+use std::sync::{Arc, OnceLock};
 use tokimo_bus_cli::TokimoAuthArgs;
 use tokimo_bus_client::{BusClient, ClientConfig};
 use tracing::{error, info};
-use std::sync::{Arc, OnceLock};
 
 #[derive(Parser, Debug)]
 #[command(

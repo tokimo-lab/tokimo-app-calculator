@@ -11,10 +11,7 @@ use tracing::{error, info};
 
 use crate::assets;
 
-pub async fn spawn(
-    service: &str,
-    _client_slot: Arc<OnceLock<Arc<BusClient>>>,
-) -> anyhow::Result<DataPlaneSocket> {
+pub async fn spawn(service: &str, _client_slot: Arc<OnceLock<Arc<BusClient>>>) -> anyhow::Result<DataPlaneSocket> {
     let (listener, socket) = BusListener::bind_for_app(service)?;
     info!(?socket, "calculator: app server listening");
 
