@@ -9,6 +9,7 @@ use serde_json::json;
 
 #[derive(Debug)]
 pub enum AppError {
+    #[allow(dead_code)]
     NotFound(String),
     Internal(String),
 }
