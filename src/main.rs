@@ -19,7 +19,7 @@ use tracing::{error, info};
 #[derive(Parser, Debug)]
 #[command(
     name = "tokimo-app-calculator",
-    about = "Calculator — Tokimo 子 app",
+    about = "Calculator — Tokimo app",
     long_about = "Tokimo Calculator app.\n\nThis is a pure UI app with no CLI commands.\nWhen launched by the supervisor (TOKIMO_BUS_SOCKET is set), runs as a background server.",
     term_width = 100
 )]
